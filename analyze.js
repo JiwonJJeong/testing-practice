@@ -17,6 +17,7 @@ const analyzeArray = function(array){
         max: array.reduce(getGreater),
         min: array.reduce(getLesser),
         average: initAverage(),
+        length: array.length,
     };
 }
 
