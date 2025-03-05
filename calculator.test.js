@@ -16,8 +16,8 @@ test("calculator subtracts negative numbers", () => {
     expect(calculator.subtract(5,-5)).toBe(10);
 })
 
-test("calculator multiply 5*2=10", () => {
-    expect(calculator.multiply(2,3)).toBe(5);
+test("calculator multiply 2*3=6", () => {
+    expect(calculator.multiply(2,3)).toBe(6);
 })
 
 test("calculator multiply negative numbers", () => {
