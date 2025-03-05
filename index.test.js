@@ -9,9 +9,9 @@ test("capitalizes lower case 2", () => {
 });
 
 test("reverses hello world", () => {
-    expect(reverseString("hello world").toBe("dlrow olleh"));
+    expect(reverseString("hello world")).toBe("dlrow olleh");
 });
 
 test("reverses hello", () => {
-    expect(reverseString("hello").toBe("olleh"));
+    expect(reverseString("hello")).toBe("olleh");
 });
