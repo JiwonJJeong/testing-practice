@@ -15,3 +15,7 @@ test("shift wraps from z to a", () => {
 test("case is preserved", () => {
     expect(caesarCipher("HeLLo",3)).toBe("KhOOr");
 })
+
+test("punctuation is unchanged", () => {
+    expect(caesarCipher("Hello, World!",3)).toBe("Khoor, Zruog!");
+})
