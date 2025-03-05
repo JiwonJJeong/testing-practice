@@ -22,3 +22,11 @@ test("max property is maximum for obj1", () =>{
 test("max property is maximum for obj2", () =>{
     expect(obj2.max).toBe(4);
 })
+
+test("average property is avg for obj1", () =>{
+    expect(obj1.average).toBe(4);
+})
+
+test("average property is avg for obj2", () =>{
+    expect(obj2.average).toBe(3);
+})
