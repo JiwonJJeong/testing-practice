@@ -11,3 +11,7 @@ test("basic shift by 5", () => {
 test("shift wraps from z to a", () => {
     expect(caesarCipher("xyz",3)).toBe("abc");
 })
+
+test("case is preserved", () => {
+    expect(caesarCipher("HeLLo",3)).toBe("KhOOr");
+})
