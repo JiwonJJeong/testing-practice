@@ -2,13 +2,24 @@ const caesarCipher = function(string, shiftNum){
     const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     let newString = "";
     for (const char of string){
+        let lowerChar;
         if (isUpperCase(char)){
-            let newIndex = (ALPHABET.indexOf(char.toLowerCase())+shiftNum)%26;
-            newString += ALPHABET.at(newIndex).toUpperCase();
+            lowerChar = char.toLowerCase();
         } else{
-            let newIndex = (ALPHABET.indexOf(char)+shiftNum)%26;
-            newString += ALPHABET.at(newIndex);
+            lowerChar = char;
         }
+        let newCharIndex = ALPHABET.indexOf(lowerChar);
+        // if not an alphabet char..
+        let newChar;
+        if (newCharIndex == -1){
+            newChar = char;
+        } else{
+            newChar = ALPHABET.at((newCharIndex+shiftNum)%26);
+        }
+        if (isUpperCase(char)){
+            newChar = newChar.toUpperCase();
+        }
+        newString += newChar;
     }
     return newString;
 }
